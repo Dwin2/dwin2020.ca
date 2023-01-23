@@ -15,12 +15,15 @@
     margin-right: auto;
 
 }
-.head-txt {
-    text-align: center;
+.author-txt {
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
 }
 .blog-txt {
     font-size: 18px;
-    max-width:80%;
+    width:83%;
     margin-left: auto;
     margin-right: auto;
 }
