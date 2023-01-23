@@ -3,6 +3,7 @@
 }
 .blog-img {
     height:40%;
+    max-height: 370px;
 }
 .pop-blogs {
     width:20%;
@@ -13,7 +14,6 @@
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-
 }
 .author-txt {
     position:relative;
@@ -24,6 +24,12 @@
 .blog-txt {
     font-size: 18px;
     width:83%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sub-img {
+    display: block;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
 }
