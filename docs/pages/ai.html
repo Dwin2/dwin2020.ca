@@ -52,10 +52,12 @@ and is wrapped around the whole page content, except for the footer in this exam
        <span id="white" class="ai-tag w3-tag w3-light-grey w3-margin-bottom" onclick="changeTag('white')">White</span>
     
       </div>
-      <div class="w3-card-4 w3-light-grey w3-margin-left w3-margin-right w3-margin-bottom">
+      <div class="w3-card-4 w3-light-grey w3-margin-left w3-margin-right" style="margin-bottom:50px; ">
+        <p><br></p>
         <div id="loading1" class="loader"></div>
         <div id="loading2" class="blog-txt w3-margin-top" style="text-align: center;">Loading...</div>
         <p id="tmp" class="blog-txt"></p>
+        <p><br></p>
       </div>
   </div>
 </div>
@@ -97,7 +99,12 @@ and is wrapped around the whole page content, except for the footer in this exam
         document.getElementById(curid).classList.remove("w3-black");
         document.getElementById(curid).classList.add("w3-light-grey");
         console.log(document.getElementById(curid).classList)
-        if (curid == id) continue;
+        if (curid == id) {
+          document.getElementById("loading1").style.display = "none";
+          document.getElementById("loading2").style.display = "none";
+          document.getElementById("tmp").style.display = "none";
+          continue;
+        }
       }
       if (curid == id) {
         console.log(100);
@@ -108,6 +115,7 @@ and is wrapped around the whole page content, except for the footer in this exam
     }
     function load(i) {
       document.getElementById("loading1").style.display = "block";
+      document.getElementById("loading2").style.display = "block";
       document.getElementById("loading2").innerHTML = "Loading...";
       document.getElementById("tmp").innerHTML = "";
       document.getElementById("tmp").style.display = "none";
