@@ -125,7 +125,7 @@ and is wrapped around the whole page content, except for the footer in this exam
       <h4>Tags</h4>
     </div>
     <div class="w3-container w3-white">
-    <p><span class="w3-tag w3-black w3-margin-bottom">Student Life</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Competitive Programming</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Travel</span>
+    <p><span class="w3-tag w3-light-grey w3-margin-bottom" onclick="changeTag('SL')">Student Life</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Competitive Programming</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Travel</span>
       <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Truth & Reconciliation</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Artificial Intelligence</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sustainability</span>
       <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Bridge</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Fun</span>
     </p>
@@ -147,6 +147,12 @@ and is wrapped around the whole page content, except for the footer in this exam
   <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Next »</button>
   <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p> -->
 </footer>
-
+<script type='text/javascript'>
+  function changeTag(x) {
+    console.log(100)
+    document.getElementsByClassName("w3-tag w3-light-grey w3-margin-bottom").className = "w3-tag w3-black w3-small w3-margin-bottom";
+    // document.getElementsByClassName("w3-id").classList.add("w3-black")
+  }
+</script>
 </body>
 </html>
