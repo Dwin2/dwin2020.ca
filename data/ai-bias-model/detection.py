@@ -29,14 +29,14 @@ words = {
 }
 
 for i in range(1, totalArticles+1):
-    file = "./docs/ai-bias-model/articles/article" + str(i) + ".txt"
+    file = "./data/ai-bias-model/articles/article" + str(i) + ".txt"
     with open(file, "r") as f:
         articles.append(list(map(str.strip, f.readlines(), )))
 
-with open("./docs/ai-bias-model/adjectives/negative_words.txt", "r") as f:
+with open("./data/ai-bias-model/adjectives/negative_words.txt", "r") as f:
     neg_words = list(map(str.strip, f.readlines(), ))
 
-with open("./docs/ai-bias-model/adjectives/positive_words.txt", "r") as f:
+with open("./data/ai-bias-model/adjectives/positive_words.txt", "r") as f:
     pos_words = list(map(str.strip, f.readlines(), ))
 
 cnt = 1
@@ -75,7 +75,7 @@ for i in range(len(results)):
         #x = 1
     
 
-with open("./docs/ai-bias-model/test.txt", "w") as f:
+with open("./data/ai-bias-model/test.txt", "w") as f:
     for i in range(len(results)):
         print(len(results[i][0]), len(results[i][1]))
         f.write(str(results[i][0]))
