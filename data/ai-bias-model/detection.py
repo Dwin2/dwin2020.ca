@@ -27,6 +27,19 @@ words = {
     'Indigenous': [[], []],
     'White' : [[], []],
 }
+titles = {
+    'South Asian' : [[], []],
+    'Chinese' : [[], []],
+    'Black' : [[], []],
+    'Filipino' : [[], []],
+    'Arab' : [[], []],
+    'Latin American' : [[], []],
+    'Southeast Asian' : [[], []],
+    'West Asian' : [[], []],
+    'Korean and Japanese' : [[], []],
+    'Indigenous': [[], []],
+    'White' : [[], []],
+}
 
 for i in range(1, totalArticles+1):
     file = "./data/ai-bias-model/articles/article" + str(i) + ".txt"
@@ -48,11 +61,13 @@ for article in articles:
                 if word not in line: continue
                 keywords[keyword][0].append(line)
                 words[keyword][0].append(word)
+                titles[keyword][0].append(article[0])
             for word in pos_words:
                 if word not in line: continue
                 keywords[keyword][1].append(line)
                 words[keyword][1].append(word)
-    print(cnt)
+                titles[keyword][1].append(article[0])
+    #print(cnt)
     cnt += 1
 
 results = []
@@ -60,15 +75,16 @@ results = []
 for keyword in keywords:
     print(keyword, len(keywords[keyword][0]), len(keywords[keyword][1]))
 
+
 for keyword in keywords: results.append([[], []])
 
 for i in range(len(results)):
     #print(keyword)
-    for line in keywords[names[i]][0]: 
+    for line in titles[names[i]][0]: 
         if line in results[i][0]: continue
         results[i][0].append(line)
-    for line in keywords[names[i]][1]: 
-        if line in results[i][1]: continue
+    for line in titles[names[i]][1]: 
+        #if line in results[i][1]: continue
         results[i][1].append(line)
         #print(line)
         #print(words[keyword][0])

@@ -32,11 +32,27 @@ and is wrapped around the whole page content, except for the footer in this exam
         <p class="blog-txt">
           The Personal Project is designed to cultivate individual interests by providing us with an opportunity to pursue areas we are passionate about. For me, this was bringing positive change to society while focusing on the realm of algorithms. That's when I discovered algorithmic bias, an increasingly prevalent social justice issue as technology and artificial intelligence becomes a larger and larger part of our society.
         <br> <br> 
-        It's rooted in models amplifying human biases through discriminatory assumptions made in the machine training process. Why do some hiring programs disproportionately accept one group of applicants over another? That's algorithmic bias at work. For my Personal Project, I'm creating an application that informs viewers about the bias present in various sources by calculating and assigning an index to each. 
-        <br> <br> 
-        Try this demo made with articles from the CBC:
+        As of 2023, Corporations are increasingly turning to Artificial Intelligence (AI) systems and machine learning models to automate basic decision-making processes. To implement this process, computers follow a strict set of rules, or an algorithm, for their calculations. While these algorithms have widespread benefits, research has revealed some troubling harms in which the nature of algorithmic decision-making was found to reflect human biases. This issue, known as algorithmic bias, has been dominant in society, undermining equal opportunity and exacerbating oppression. 
         <br> <br>
-        
+        <u>Three Examples of Algorithmic Bias</u>
+        <br> <br>
+        1. Hiring Programs
+        <br> <br>
+        <img class="hiring-img" src="../img/halgo.png" alt="Bias in Hiring Algorithms">
+        <br><br>
+        A lot of hiring programs have been exposed to accepting different groups of applicants disproportionately. Societal factors have been influencing the algorithm’s decision-making process and causing the unjustified labeling of different groups of people as favorable or unfavorable candidates. A lot of minorities are significantly disadvantaged, as algorithms tend to misinterpret the lack of candidates from a specific ethnic group or race as being unfavorable. 
+        <br> <br>
+        The most notable example is from Amazon, where a 2015 study found Amazon’s algorithm to be biased against women. The algorithm was subsequently ditched and the company lessened its reliance on AI. 
+        <br> <br>
+        2. Media Sources
+        <br> <br>
+        <img class="media-img" src="../img/media.png" alt="Bias in Media Sources">
+        <br> <br>
+        In media sources, algorithms have an inconsistent prioritization of ideas, leading to unjust patterns in its algorithmically generated trending and recommended pages. Certain ideas are amplified more than others. Since media is designed to maximize viewer attention, its algorithms can redirect viewers in problematic ways. Content filtering has the common problem of over-recommending polarized topics. 
+        <br> <br>
+        Researchers at the Illinois Institute of Technology conducted a study to see how algorithms recommending news stories create filter bubbles that influence readers’ political views. Among its findings was that viewers with more extreme views were shown less diverse content. 
+        <br> <br>
+        Try this demo made with articles from the CBC:
         </p>
         <div class="flex">
         <!-- <img class="sub-img" src="../img/ai.jpg" alt="Artificial Intelligence"> -->
@@ -60,6 +76,10 @@ and is wrapped around the whole page content, except for the footer in this exam
         <p id="tmp" class="blog-txt"></p>
         <p><br></p>
       </div>
+      <p class="blog-txt">
+        3. Recidivism Predictions
+        <br> <br>
+      </p>
   </div>
 </div>
 
@@ -86,6 +106,33 @@ and is wrapped around the whole page content, except for the footer in this exam
     ['After retiring from the NHL in 2002, Odjick concentrated on being\xa0an Indigenous role model. He staged various workshops throughout\xa0B.C. on issues including\xa0goal setting, relationship building and\xa0communication skills while promoting anti-bullying characteristics.', '"You could feel the heaviness of the pain coming from some of the people, the elders that were there," said Malcolm Blacksmith, who accompanied Moody on the run as a youth chaperone with the Indigenous youth-serving organization Jordan\'s Principle\xa0Birdtail.', "Land that the First Nation considers part of its Indigenous protected area could be reopened to logging as Ontario's Ministry of Natural Resources and Forestry (MNRF) prepares a new 10-year forest management plan in the Whiskey Jack Forest, according to a ministry spokesperson.", 'Logan Turner has been working as a journalist for CBC News, based in Thunder Bay, since graduating from journalism school at UBC in 2020. Born and raised along the north shore of Lake Superior in Robinson-Superior Treaty Territory, Logan covers a range of stories focused on health, justice, Indigenous communities, racism and the environment. You can reach him at logan.turner@cbc.ca.', 'For her part, Dianne Ottereyes Reid, switched after only a year in linguistics to a communications degree. After graduating, she came back to CBC and supported efforts to create Indigenous-language community radio stations throughout Quebec and went on to work for the Cree Nation Government and then went on to help\xa0found the Aanischaaukamikw\xa0Cree Cultural Institute.'],
     ['Nancy Russell has been a reporter with CBC since 1987, in Whitehorse, Winnipeg, Toronto and Charlottetown. When not on the job, she spends her time on the water or in the gym rowing, or walking her dog. Nancy.Russell@cbc.ca', "One corner was dedicated to White Rose, a brand of gasoline sold across Canada until the early 1960s. Another section displayed Irving Oil signs, actual gas pumps and a near mint-condition storage rack from the early days of K.C. Irving's company. That rack sold for more than $23,000."],  
   ]
+  neg_names = [
+    [],
+    ["When the world's biggest McDonald's was told to close in China", "When the world's biggest McDonald's was told to close in China", "When the world's biggest McDonald's was told to close in China", "When the world's biggest McDonald's was told to close in China"],
+    ['Molson-Carling merger meant trouble was brewing for workers', 'Jeff Beck, guitar virtuoso who influenced generations, dead at 78', "Birdtail Sioux teen runs 100 km in Minnesota event to honour Dakota men hanged in 1862 mass execution", 'Birdtail Sioux teen runs 100 km in Minnesota event to honour Dakota men hanged in 1862 mass execution', 'Birdtail Sioux teen runs 100 km in Minnesota event to honour Dakota men hanged in 1862 mass execution', 'Birdtail Sioux teen runs 100 km in Minnesota event to honour Dakota men hanged in 1862 mass execution', 'Birdtail Sioux teen runs 100 km in Minnesota event to honour Dakota men hanged in 1862 mass execution', 'Terry Hall, The Specials singer and Our Lips Are Sealed songwriter, dead at 63', 'Terry Hall, The Specials singer and Our Lips Are Sealed songwriter, dead at 63', 'Terry Hall, The Specials singer and Our Lips Are Sealed songwriter, dead at 63', 'Terry Hall, The Specials singer and Our Lips Are Sealed songwriter, dead at 63'],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    ['Gino Odjick, Canucks fan favourite, dead at 52', "Birdtail Sioux teen runs 100 km in Minnesota event to honour Dakota men hanged in 1862 mass execution", 'Grassy Narrows marks 20 years of the blockade protecting its land from logging','Grassy Narrows marks 20 years of the blockade protecting its land from logging', "'Keep a language alive': CBC Cree unit celebrates milestone anniversaries"],
+    ['Remains of wooden ship appear, then disappear on beach in North Rustico, P.E.I.', 'He spent years collecting vintage gas station memorabilia. It all sold for over $700K'],
+  ]
+  neg_dates = [
+    [],
+    ["Nov 30, 2022", "Nov 30, 2022", "Nov 30, 2022", "Nov 30, 2022"],
+    ['Jan 18, 2023', "Jan 11, 2023", "Jan 8, 2023", "Jan 8, 2023", "Jan 8, 2023","Jan 8, 2023", "Jan 08, 2023", "Dec 20, 2022", "Dec 20, 2023"],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    ["Jan 15, 2023", "Jan 8, 2023", "Jan 2, 2023", "Jan 2, 2023", "Nov 24th, 2022"],
+    ["Jan 10, 2023", "Nov 30, 2022"]
+  ]
+
   // pos_results = [[], [], [], [], [], [], [], [], [], [], [], []]
   //poscount = [0, 2, 15, 0, 0, 0, 0, 0, 0, 15, 2]
   negcount = []
@@ -125,10 +172,12 @@ and is wrapped around the whole page content, except for the footer in this exam
     function showPage(i) {
       console.log(i);
       document.getElementById("loading1").style.display = "none";
-      document.getElementById("loading2").innerHTML = "Found " + negcount[i] + " negative results for " + names[i];
+      document.getElementById("loading2").innerHTML = "Found " + negcount[i] + " instances of negative bias results for " + names[i];
       document.getElementById("tmp").style.display = "block";
       for (let j=0; j < negcount[i]; j++) {
-        document.getElementById("tmp").innerHTML += '<br><br>';
+        document.getElementById("tmp").innerHTML += '<br><br>'//Article Title: ';
+        document.getElementById("tmp").innerHTML += "<u>" + neg_names[i][j] + "</u><br>";
+        document.getElementById("tmp").innerHTML += "<span class='w3-opacity'>" + neg_dates[i][j] + "</span><br>";
         document.getElementById("tmp").innerHTML += neg_results[i][j];
       }
     }
