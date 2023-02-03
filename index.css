@@ -27,6 +27,12 @@
     margin-left: auto;
     margin-right: auto;
 }
+.head1-txt {
+    font-size: 22px;
+}
+.head2-txt {
+    font-size: 20px;
+}
 .sub-img {
     display: block;
     margin-top: 50px;
